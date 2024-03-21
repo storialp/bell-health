@@ -115,6 +115,25 @@ export default function Hero() {
       <h1 className="max-w-lg text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">
        Welcome back Mario!
       </h1>
+      <p className="mt-3 text-lg leading-8 text-gray-600">
+       Today Carlotta is feeling...
+      </p>
+      <div className="w-full flex flex-row relative items-center">
+       <div className="w-full bg-gray-200 rounded-full h-5">
+        <div
+         className="bg-green-600 h-5 rounded-full"
+         style={{
+          width: '80%',
+         }}
+        ></div>
+       </div>
+      </div>
+      <div className='flex flex-row-reverse'>
+       <h1 className="max-w-lg text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        Happy!
+       </h1>
+      </div>
+
       {/* <p className="mt-6 text-lg leading-8 text-gray-600">
        Esse id magna consectetur fugiat non dolor in ad laboris magna laborum ea consequat. Nisi irure aliquip
        nisi adipisicing veniam voluptate id. In veniam incididunt ex veniam adipisicing sit.

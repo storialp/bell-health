@@ -22,8 +22,8 @@ export default function Hero() {
 
    </header>
 
-   <div className="mx-auto px-6 pb-6 pt-16 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
-    <div className='w-screen h-36  flex items-center justify-center'>
+   <div className="mx-auto pr-6 pb-6 pt-16 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
+    <div className='w-screen h-36 flex items-center justify-center'>
      {!clickedOn ? (
       <div className="lg:mx-0 lg:flex-auto  mx-auto">
        <h1 className="max-w-lg text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">

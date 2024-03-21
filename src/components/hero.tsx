@@ -1,5 +1,7 @@
+import { LightBulbIcon, QuestionMarkCircleIcon } from '@heroicons/react/24/outline'
 import FreshLogo from './freshLogo'
 import { useState } from 'react'
+import Link from 'next/link'
 
 
 export default function Hero() {
@@ -49,9 +51,13 @@ export default function Hero() {
        </div>
       </div>
      ) : (
-      <div className='border border-gray-300 bg-yellow-50 rounded-full px-4 py-3 text-center justify-center mx-auto w-4/6'>
-       Do you have a specific question? <br /> You can ask me anything!
-      </div>
+      <Link href='/#'>
+       <div className='border border-gray-300 bg-gray-100 rounded-full gap-x-2 px-2 py-3 text-center justify-center mx-auto w-7/8 flex flex-row'>
+        <QuestionMarkCircleIcon className='w-12 h-auto' />
+        <div className='text-gray-900 font-bold'>Do you have a specific question? <br /> You can ask me anything!</div>
+       </div>
+      </Link>
+
      )}
     </div>
     <div className="mt-2 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
@@ -59,12 +65,16 @@ export default function Hero() {
     </div>
     {!!clickedOn ?
      (
-      <div className='flex items-center justify-center '>
-       <div className='border border-gray-300 bg-yellow-50 rounded-full px-2 py-3 text-center w-3/4'>
-        Click here to get a daily health tip
+      <Link href='/#'>
+       <div className='w-screen flex items-center justify-center'>
+        <div className='flex items-center justify-center text-center gap-x-2 border border-gray-300 bg-gray-100 rounded-full w-5/6 py-3'>
+         <LightBulbIcon className='h-12 w-auto text-gray-800' />
+         <div className='text-center text-gray-800 font-bold'>
+          Click here to get a daily health tip
+         </div>
+        </div>
        </div>
-      </div>
-
+      </Link>
      ) : (
       <>
        <div className='flex-col text-center '>

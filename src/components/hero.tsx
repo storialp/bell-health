@@ -5,10 +5,11 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import FreshLogo from './freshLogo'
 
 const navigation = [
- { name: 'Product', href: '#' },
- { name: 'Features', href: '#' },
- { name: 'Marketplace', href: '#' },
- { name: 'Company', href: '#' },
+ { name: 'Home', href: '#' },
+ { name: 'Forums', href: '#' },
+ { name: 'Rankings', href: '#' },
+ { name: 'Tracking', href: '#' },
+ { name: 'Profile', href: '#' },
 ]
 
 export default function Hero() {

@@ -1,63 +1,57 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-// Since we're not actually using the FlagIcon, we won't import it
-// If you have your own flag display logic, use that instead
-
-// Define a type for the leaderboard entry
-type LeaderboardEntry = {
-    username: string;
-    points: number;
-    nationality: string;
-};
-
-// Define a type for the LeaderboardCard props
 type LeaderboardCardProps = {
     rank: number;
-    username: string;
+    name: string;
     points: number;
     nationality: string;
 };
 
-function LeaderboardCard({ rank, username, points, nationality }: LeaderboardCardProps) {
+const LeaderboardCard: React.FC<LeaderboardCardProps> = ({ rank, name, points, nationality }) => {
+    const flagImageUrl = `https://flagsapi.com/${nationality}/shiny/64.png`;
+
     return (
-        <div className={`flex items-center justify-between p-4 ${rank === 1 ? 'bg-red-100' : 'bg-white'}`}>
-            <div className="flex items-center">
-                <span className="font-bold text-lg">{rank}</span>
-                <span className="ml-4 font-medium">{username}</span>
-            </div>
-            <div className="flex items-center">
-                {/* Replace this with your actual flag component or image */}
-                <span className={`flag-icon flag-icon-${nationality.toLowerCase()} h-6 w-6`}></span>
-                <span className="ml-2 text-lg">{points}</span>
-            </div>
+        <div className={`flex items-center justify-between px-4 py-2 mb-2 rounded-lg shadow-lg  ${rank === 5 ? 'bg-[#ffbdbd]' : 'bg-[#f8f8f8]'}`}>
+            <span className="font-bold text-lg">{rank}</span>
+            <span className="flex-1 mx-4 font-medium">{name}</span>
+            <span className="font-medium">{points}</span>
+            <img src={flagImageUrl} alt={`${nationality} flag`} className="w-6 h-4 object-cover ml-2" />
         </div>
     );
-}
+};
 
-export default function Leaderboard() {
-    const [leaderboardData, setLeaderboardData] = useState<LeaderboardEntry[]>([]);
+type LeaderboardEntry = {
+    name: string;
+    points: number;
+    nationality: string;
+};
 
-    useEffect(() => {
-        // Fake backend data
-        const fakeData = [
-            { username: "Bob", points: 150, nationality: "ca" }, // Use country code for nationality
-            { username: "Diana", points: 130, nationality: "au" },
-            { username: "Charlie", points: 120, nationality: "uk" },
-            { username: "Ethan", points: 110, nationality: "de" },
-        ];
-
-        setLeaderboardData(fakeData);
-    }, []); // Empty dependency array means this effect will only run once after the initial render
+export default function LeaderboardPage() {
+    const leaderboardData: LeaderboardEntry[] = [
+        { name: "Julien Dupont", points: 8920, nationality: "NO" },
+        { name: "Gonzalo Paredes", points: 8920, nationality: "ES" },
+        { name: "Mary Sullivan", points: 8856, nationality: "VE" },
+        { name: "Maria Flores", points: 8660, nationality: "IT" },
+        { name: "Me", points: 7517, nationality: "US" },
+        { name: "Anonymous", points: 7733, nationality: "DE" },
+        { name: "David Meier", points: 6890, nationality: "FR" },
+        { name: "Anna Nagy", points: 6783, nationality: "HU" },
+        { name: "Anonymous", points: 8920, nationality: "CA" },
+    ];
 
     return (
-        <div className="container mx-auto p-4">
-            <h2 className="text-center text-4xl font-bold mb-4">Leaderboard</h2>
-            <div>
+        <div className="flex flex-col items-center p-4 bg-white min-h-screen">
+            <h1 className="text-4xl font-bold text-gray-900 my-6">Leaderboard</h1>
+            <div className="flex gap-4 mb-6">
+                <button className="px-6 py-2 bg-[#ffbdbd] text-gray-700 font-semibold rounded-full shadow-md">Global</button>
+                <button className="px-6 py-2 bg-[#f8f8f8] text-gray-700 font-semibold rounded-full shadow-xl">Local</button>
+            </div>
+            <div className="w-full max-w-md">
                 {leaderboardData.map((entry, index) => (
                     <LeaderboardCard
                         key={index}
                         rank={index + 1}
-                        username={entry.username}
+                        name={entry.name}
                         points={entry.points}
                         nationality={entry.nationality}
                     />

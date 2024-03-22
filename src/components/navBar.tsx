@@ -16,7 +16,7 @@ export default function NavBar() {
    <Link href="/habits" passHref>
     <ArrowTrendingUpIcon className='h-8 w-8 text-gray-500 hover:text-gray-800' />
    </Link>
-   <Link href="/chat">
+   <Link href="#">
     <UserIcon className='h-8 w-8 text-gray-500 hover:text-gray-800' />
    </Link>
   </div>

@@ -13,7 +13,6 @@ export default function Home() {
    </Head>
    <main className="max-h-screen">
     {/* <ChatBot /> */}
-    <Chat />
     <NavBar />
    </main>
   </>

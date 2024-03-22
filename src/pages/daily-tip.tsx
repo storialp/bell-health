@@ -15,6 +15,10 @@ export default function Home() {
     <DailyTip />
     <NavBar />
    </main>
+   <main className="max-h-screen">
+    <DailyTip />
+    <NavBar />
+   </main>
   </>
  );
 }

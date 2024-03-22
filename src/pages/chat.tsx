@@ -1,6 +1,6 @@
 import Head from "next/head";
 import NavBar from "~/components/navBar";
-import ChatBot from "~/components/chatBot";
+import Chat from "~/components/chat";
 
 export default function Home() {
  return (
@@ -13,6 +13,7 @@ export default function Home() {
    </Head>
    <main className="max-h-screen">
     {/* <ChatBot /> */}
+    <Chat />
     <NavBar />
    </main>
   </>

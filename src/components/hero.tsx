@@ -65,7 +65,7 @@ export default function Hero() {
     </div>
     {!!clickedOn ?
      (
-      <Link href='/#'>
+      <Link href='/daily-tip'>
        <div className='w-screen flex items-center justify-center'>
         <div className='flex items-center justify-center text-center gap-x-2 border border-gray-300 bg-gray-100 rounded-full w-5/6 py-3'>
          <LightBulbIcon className='h-12 w-auto text-gray-800' />

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function NavBar() {
  return (
-  <div className='fixed bottom-0 flex gap-x-6 w-full items-center justify-center overflow-hidden border-t-2 border-gray-200 py-2'>
+  <div className='fixed inset-x-0 bottom-0 flex w-full items-center justify-around overflow-hidden border-t-2 border-gray-200 py-2'>
    <Link href='/'>
     <HomeIcon className='h-8 w-8 text-gray-500 hover:text-gray-800' />
    </Link>

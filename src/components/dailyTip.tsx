@@ -10,7 +10,9 @@ export default function Dailytip() {
       Did you know you can hit today&apos;s exercise goals in just 20 minutes...?
       <br />
       Workout with me</div>
-     <div className="bg-amber-400 mt-4 text-center rounded-2xl px-2 py-4">CLICK TO EXERCISE</div>
+     <a href="/daily-workout">
+      <div className="bg-amber-400 mt-4 text-center rounded-2xl px-2 py-4">CLICK TO EXERCISE</div>
+     </a>
     </div>
     <div className="bg-red-500 ">
      <img src="https://utfs.io/f/e9822547-039a-47bd-8a05-ac881eb76277-gnruf6.png" alt="Carlotta picture" className='h-72 w-auto z-30 absolute -ml-6' />

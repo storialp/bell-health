@@ -7,7 +7,7 @@ export default function NavBar() {
    <Link href='/'>
     <HomeIcon className='h-8 w-8 text-gray-500 hover:text-gray-800' />
    </Link>
-   <Link href="/chat">
+   <Link href="/forums">
     <ChatBubbleLeftEllipsisIcon className='h-8 w-8 text-gray-500 hover:text-gray-800' />
    </Link>
    <Link href="/leaderboard" passHref>

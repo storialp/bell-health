@@ -16,7 +16,7 @@ export default function Dailytip() {
       <div className="bg-amber-400 mt-4 text-center rounded-2xl px-2 py-4">CLICK TO EXERCISE</div>
      </Link>
     </div>
-    <div className="bg-red-500 ">
+    <div>
      <img src="https://utfs.io/f/e9822547-039a-47bd-8a05-ac881eb76277-gnruf6.png" alt="Carlotta picture" className='h-72 w-auto z-30 absolute -ml-6' />
     </div>
     <img src="https://s3-alpha-sig.figma.com/img/4252/0a62/a4c56943bde96785341933205d206e88?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ne5JppU2tfq~pis0HfveotN3x8CwbRnRXyutKtmlxTyLuN0TSN4FTZuhrO2iTT8NTj3mS-MKbDrnzcpAKciAgKKK0SIYmcwA0Yc3bScMwiUt7PHKT0wQj0xtphXd8C8DPtilq0XpPVCLa3sC-XRmdJmtWJXQMXCx5zPUyZmVbbrlcyrzZYanRIl7p2ZmjYzBxtD1uvGoSSvjdW4sbdMjM4h-yw7SU~iixwD-fFXeoTg7P5~L7KZZKG1q5fBILXNg9H0rKuA2ZQTIVcttSFU1NxGXHzAmHh-pIiiV7BTOO272Jjm-iUY0OeJ9GbVxvejxmoVWKPa0uv-Z6r82rEMOLw__" alt="Grass pattern" className="bottom-12 absolute z-10 h-64 w-96" />
